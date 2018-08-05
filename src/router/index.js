@@ -8,7 +8,7 @@ Vue.use(Router)
 
 export const constantRouterMap = [
   {
-    path: '/',
+    path: '/login',
     name: 'Hello',
     component: Login
   },

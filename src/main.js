@@ -9,6 +9,8 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import './permission' // permission control
+
 Vue.use(Element)
 Vue.config.productionTip = false
 
