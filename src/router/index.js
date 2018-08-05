@@ -17,6 +17,7 @@ export const constantRouterMap = [
     name: 'Hello',
     component: HelloWorld
   },
+  { path: '/404', component: () => import('@/views/errorPage/404'), hidden: true },
 ]
 
 export default new Router({
@@ -54,6 +55,7 @@ export const asyncRouterMap = [
       }
     }]
   },
+  { path: '*', redirect: '/404', hidden: true }
 ]
 
 
