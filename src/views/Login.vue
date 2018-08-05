@@ -12,7 +12,12 @@
 export default {
   name: 'Login',
   data () {
-    return {}
+    return {
+      loginForm: {
+        username: 'clydeusername',
+        password: '123'
+      }
+    }
   },
   methods: {
     /**
@@ -20,7 +25,9 @@ export default {
      */
     loginHandle () {
       // TODO promise
-      this.$router.push({ path: '/hello' })
+      this.$store.dispatch('LoginByUsername', this.loginForm).then(() => {
+        this.$router.push({ path: '/hello' })
+      })
     }
   }
 }
